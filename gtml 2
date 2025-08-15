@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hujan Bulan Juni</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            margin: 40px;
+        }
+        h1 {
+            text-align: center;
+            font-style: italic;
+        }
+        hr {
+            margin: 10px 0;
+        }
+        .author {
+            text-align: center;
+            font-size: 14px;
+        }
+        .poem {
+            margin-top: 30px;
+            white-space: pre-line; /* agar format baris tetap */
+        }
+        .bold {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .underline {
+            text-decoration: underline;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hujan Bulan Juni</h1>
+    <hr>
+    <p class="author">oleh Sapardi Djoko Damono</p>
+
+    <div class="poem">
+tak ada yang lebih <span class="bold">tabah</span>  
+dari hujan bulan Juni  
+dirahasiakannya rintik rindunya  
+kepada pohon berbunga itu  
+
+tak ada yang lebih bijak  
+dari hujan bulan Juni  
+dihapusnya jejak-jejak kakinya  
+<span class="underline">yang ragu-ragu di jalan itu</span>  
+
+tak ada yang lebih arif  
+dari hujan bulan Juni  
+dibiarkannya yang tak terucapkan  
+diserap akar pohon bunga itu  
+    </div>
+
+</body>
+</html>
+
+   
