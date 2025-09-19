@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pendaftaran</title>
+    <style>
+        .data-pribadi {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .data-pribadi label {
+            width: 130px;
+        }  
+        .data-pribadi .colon {
+            width: 18px;
+            text-align: center;
+        }
+        .judul {
+            font-weight: bold;
+            margin-top: 22px;
+            margin-bottom: 8px;
+        }
+        .pendaftaran {
+            float: right;
+            margin-top: -210px;
+        }
+    </style>
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <td width="120" align="center">
+                <img src="image.png" width="200" height="200" alt="logo">
+            </td>
+            <td align="center">
+                <h2 style="color: rgb(54, 45, 104);">FORMULIR PENDAFTARAN</h2><br>
+                <div style="color: rgb(87, 74, 158);">
+                    <b>CALON SISWA/SISWI MTs. ..................................<br>
+                    <b>TAHUN PELAJARAN 2016/2017</b><br><br>
+                    <p>
+                    Sekretariat : Jln. ..................
+                    Kode Pos : ..................<br/>
+                    Email : .....................@yahoo.co.id<br/>
+                    Website : http://......................com
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <hr>
+    <div class="judul">A. DATA PRIBADI CALON SISWA*</div>
+    <ol>
+        <li class="data-pribadi">
+            <label for="nama">Nama Lengkap</label>
+            <span class="colon">:</span>
+            <input type="text" id="nama" size="40">
+        </li>
+        <li class="data-pribadi">
+            <label for="jk">Jenis Kelamin</label>
+            <span class="colon">:</span>
+            <input type="radio" id="jk" name="jk" value="Laki-laki"> Laki-laki
+            <input type="radio" id="jk" name="jk" value="Perempuan"> Perempuan
+        </li>
+        <li class="data-pribadi">
+            <label for="ttl">Tempat/Tgl. Lahir</label>
+            <span class="colon">:</span>
+            <input type="text" id="ttl" size="22">/
+            <input type="date" id="tgl_lahir" name="tgl_lahir">
+        </li>
+        <li class="data-pribadi">
+            <label for="alamat">Alamat</label>
+            <span class="colon">:</span>
+            <textarea id="alamat" rows="2" cols="41"></textarea>
+        </li>
+        <li class="data-pribadi">
+            <label for="anakke">Anak ke</label>
+            <span class="colon">:</span>
+            <input type="number" id="anakke" size="4">dari<input type="number" size="4"> bersaudara
+        </li>
+    </ol>
+    <section class="pendaftaran">
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <td>No. Pendaftaran</td>
+        </tr>
+        <tr>
+            <td><img src="image.png" width="100" height="100" alt="logo"></td>
+        </tr>
+    </table>
+    </section>
+    <div class="judul">B. DATA ORANGTUA/WALI CALON SISWA**</div>
+    <ol>
+        <li class="data-pribadi">
+            <label for="ayah">Nama Ayah</label>
+            <span class="colon">:</span>
+            <input type="text" id="ayah" size="40">
+        </li>
+        <li class="data-pribadi">
+            <label for="ibu">Nama Ibu</label>
+            <span class="colon">:</span>
+            <input type="text" id="ibu" size="40">
+        </li>
+        <li class="data-pribadi">
+            <label for="kerjaayah">Pekerjaan Ayah</label>
+            <span class="colon">:</span>
+            <input type="text" id="kerjaayah" size="40">
+        </li>
+        <li class="data-pribadi">
+            <label for="kerjaibu">Pekerjaan Ibu</label>
+            <span class="colon">:</span>
+            <input type="text" id="kerjaibu" size="40">
+        </li>
+        <li class="data-pribadi">
+            <label for="alamatortu">Alamat Orangtua</label>
+            <span class="colon">:</span>
+            <textarea id="alamatortu" rows="2" cols="41"></textarea>
+        </li>
+        <li class="data-pribadi">
+            <label for="telportu">No. Telp/HP</label>
+            <span class="colon">:</span>
+            <input type="number" id="telportu" size="37">
+        </li>
+        <li class="data-pribadi">
+            <label for="wali">Nama Wali</label>
+            <span class="colon">:</span>
+            <input type="text" id="wali" size="40">
+        </li>
+        <li class="data-pribadi">
+            <label for="kerjawali">Pekerjaan Wali</label>
+            <span class="colon">:</span>
+            <input type="text" id="kerjawali" size="40">
+        </li>
+        <li class="data-pribadi">
+            <label for="alamatwali">Alamat Wali</label>
+            <span class="colon">:</span>
+            <textarea id="alamatwali" rows="2" cols="41"></textarea>
+        </li>
+    </ol>
+    <div class="judul">C. ASAL SEKOLAH</div>
+    <ol>
+        <li class="data-pribadi">
+            <label for="namasekolah">Nama Sekolah</label>
+            <span class="colon">:</span>
+            <input type="text" id="namasekolah" size="40">
+        </li>
+        <li class="data-pribadi">
+            <label for="statussekolah">Status Sekolah</label>
+            <span class="colon">:</span>
+            <input type="text" id="statussekolah" size="40">
+        </li>
+        <li class="data-pribadi">
+            <label for="alamatsekolah">Alamat Sekolah</label>
+            <span class="colon">:</span>
+            <textarea id="alamatsekolah" rows="2" cols="41"></textarea>
+        </li>
+        <li class="data-pribadi">
+            <label for="nisn">NISN</label>
+            <span class="colon">:</span>
+            <input type="number" id="nisn" size="37">
+        </li>
+        <li class="data-pribadi">
+            <label for="pesertaun">Nomor Peserta UN SD</label>
+            <span class="colon">:</span>
+            <input type="number" id="pesertaun" size="37">
+        </li>
+    </ol>
+    <div class="judul">D. DATA SKHU/IJAZAH</div>
+    <ol>
+        <li class="data-pribadi">
+            <label for="nomorskhu">Nomor SKHU</label>
+            <span class="colon">:</span>
+            <input type="number" id="nomorskhu" size="37">
+        </li>
+        <li class="data-pribadi">
+            <label for="jumlahun">Jumlah Nilai UN</label>
+            <span class="colon">:</span>
+            <input type="number" id="jumlahun" size="37">
+        </li>
+        <li class="data-pribadi">
+            <label for="rataun">Nilai Rata-rata UN</label>
+            <span class="colon">:</span>
+            <input type="number" id="rataun" size="37">
+        </li>
+    </ol>
+    
+</body>
+</html>
