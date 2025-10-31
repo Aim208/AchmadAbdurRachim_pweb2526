@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objek radio</title>
+</head>
+<body>
+        <script language="JavaScript">
+        function radio_box(form) {
+            var ket = "";
+
+            if (form.jenis_kelamin[0].checked) {
+                ket = "wanita";
+            } else if (form.jenis_kelamin[1].checked) {
+                ket = "pria";
+            } else {
+                ket = "belum dipilih";
+            }
+
+            alert('Anda adalah seorang ' + ket);
+        }
+    </script>
+
+    <form name="ffrom">
+        <h1>Masukkan data dengan objek radio</h1>
+        <hr>
+        <p><input type="radio" name="jenis_kelamin" value="wanita"> Wanita</p>
+        <p><input type="radio" name="jenis_kelamin" value="pria"> Pria</p>
+        <hr>
+        <p>
+            <input type="button" value="Konfirmasi" onclick="radio_box(document.ffrom)">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+
+</body>
+</html>

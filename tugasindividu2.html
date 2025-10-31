@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas2</title>
+</head>
+<body>
+        <div class="container">
+        <h2>Calculator</h2>
+        <hr width="300">
+
+        <form name="calc" align="center" onsubmit="return false;">
+            <p>
+                Bilangan 1 : <input type="text" name="bil1">
+            </p>
+            <p>
+                Bilangan 2 : <input type="text" name="bil2">
+            </p>
+            <hr width="300">
+
+            <div class="buttons">
+                <input type="button" value="+" onclick="hitung('+')">
+                <input type="button" value="-" onclick="hitung('-')">
+                <input type="button" value="x" onclick="hitung('*')">
+                <input type="button" value="/" onclick="hitung('/')">
+                <input type="button" value="C" onclick="resetCalc()">
+            </div>
+
+            <p>
+                <b>Hasil :</b> <input type="text" name="hasil" size="15" readonly>
+            </p>
+        </form>
+
+       
+        <div id="output" class="output-box" aria-live="polite"></div>
+    </div>
+
+    <script>
+        function hitung(operasi) {
+            var a = parseFloat(document.calc.bil1.value);
+            var b = parseFloat(document.calc.bil2.value);
+
+            if (isNaN(a) || isNaN(b)) {
+                alert("Masukkan kedua bilangan terlebih dahulu!");
+                return;
+            }
+
+            var hasil;
+            var namaOperasi;
+
+            switch (operasi) {
+                case '+':
+                    hasil = a + b;
+                    namaOperasi = "Penjumlahan";
+                    break;
+                case '-':
+                    hasil = a - b;
+                    namaOperasi = "Pengurangan";
+                    break;
+                case '*':
+                    hasil = a * b;
+                    namaOperasi = "Perkalian";
+                    break;
+                case '/':
+                    if (b == 0) {
+                        alert("Tidak bisa dibagi dengan nol!");
+                        return;
+                    }
+                    hasil = a / b;
+                    namaOperasi = "Pembagian";
+                    break;
+                default:
+                    return;
+            }
+
+
+            var hasilTeks = (Number.isFinite(hasil) && Number.isInteger(hasil)) ? hasil.toString() : hasil.toString();
+
+           
+            document.calc.hasil.value = hasilTeks;
+
+            var pesan = "Hasil " + namaOperasi + " = " + hasilTeks;
+
+            
+            alert(pesan);
+
+            document.getElementById('output').textContent = pesan;
+        }
+
+        function resetCalc() {
+            document.calc.bil1.value = "";
+            document.calc.bil2.value = "";
+            document.calc.hasil.value = "";
+            document.getElementById('output').textContent = "";
+        }
+    </script>
+</body>
+</html>

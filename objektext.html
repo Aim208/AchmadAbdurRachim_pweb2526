@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan dengan Objek Teks</title>
+</head>
+<body>
+    <script language="JavaScript">
+        function kirimDataDiri() {
+            var namastr = document.ffrom.nama.value;
+            var alamatstr = document.ffrom.alamat.value;
+
+            document.ffrom.nama2.value = namastr;
+            document.ffrom.alamat2.value = alamatstr;
+        }
+    </script>
+
+    <form name="ffrom">
+        <h1>Masukkan data dengan objek teks</h1>
+        <hr>
+        <pre>
+Nama anda : <input type="text" size="11" name="nama">
+Alamat    : <input type="text" size="25" name="alamat">
+        </pre>
+
+        <br>
+        <input type="button" value="Kirim" onclick="kirimDataDiri()">
+        <input type="reset" value="Ulang">
+
+        <h3>Output</h3>
+        <pre>
+Jadi nama anda adalah : <input type="text" size="11" name="nama2">
+Alamat anda di        : <input type="text" size="25" name="alamat2">
+        </pre>
+    </form>
+</body>
+</html>

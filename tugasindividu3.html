@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas2</title>
+</head>
+<body>
+    <h1 class="title">Formulir Pendaftaran Calon Mahasiswa Baru</h1>
+
+  <div class="card">
+    <form id="pendaftaran" onsubmit="return handleSubmit(event)">
+      <fieldset>
+       
+
+        <table class="form-table">
+          <tr>
+            <td><label for="nama">Nama</label></td>
+            <td>:</td>
+            <td><input type="text" id="nama" name="nama" required></td>
+          </tr>
+
+          <tr>
+            <td><label for="alamat">Alamat</label></td>
+            <td>:</td>
+            <td><input type="text" id="alamat" name="alamat" required></td>
+          </tr>
+
+          <tr>
+            <td><label for="asal">Asal Sekolah</label></td>
+            <td>:</td>
+            <td>
+              <select id="asal" name="asal">
+                <option value="SMA">SMA</option>
+                <option value="SMK">SMK</option>
+                <option value="MA">MA</option>
+                <option value="lain">Lainnya</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Jurusan dipilih</td>
+            <td>:</td>
+            <td>
+              <label><input type="checkbox" name="jurusan" value="Teknik Informatika"> Teknik Informatika</label><br>
+              <label><input type="checkbox" name="jurusan" value="Manajemen Informatika"> Manajemen Informatika</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Jenjang</td>
+            <td>:</td>
+            <td>
+              <label><input type="radio" name="jenjang" value="Diploma" checked> Diploma</label>
+              <label><input type="radio" name="jenjang" value="Sarjana"> Sarjana</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td class="buttons">
+              <button type="submit">Kirim</button>
+              <button type="reset">Reset</button>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="card secondary">
+    <form id="pendaftaran2" onsubmit="return handleSubmit(event)">
+      <table class="form-table simple">
+        <tr>
+          <td><label for="nama2">Nama</label></td>
+          <td>:</td>
+          <td><input type="text" id="nama2" name="nama" required></td>
+        </tr>
+        <tr>
+          <td><label for="alamat2">Alamat</label></td>
+          <td>:</td>
+          <td><input type="text" id="alamat2" name="alamat" required></td>
+        </tr>
+        <tr>
+          <td><label for="asal2">Asal Sekolah</label></td>
+          <td>:</td>
+          <td><textarea id="asal2" name="asal" rows="4"></textarea></td>
+        </tr>
+        <tr>
+          <td><label for="jurusan2">Jurusan</label></td>
+          <td>:</td>
+          <td><input type="text" id="jurusan2" name="jurusan"></td>
+        </tr>
+        <tr>
+          <td><label for="jenjang2">Jenjang</label></td>
+          <td>:</td>
+          <td><input type="text" id="jenjang2" name="jenjang"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td class="buttons">
+            <button type="submit">Kirim</button>
+            <button type="reset">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+  <script>
+   
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = {};
+      const elements = form.elements;
+
+    
+      for (let i = 0; i < elements.length; i++) {
+        const el = elements[i];
+        if (!el.name) continue;
+
+        if (el.type === 'checkbox') {
+          if (!data[el.name]) data[el.name] = [];
+          if (el.checked) data[el.name].push(el.value);
+        } else if (el.type === 'radio') {
+          if (el.checked) data[el.name] = el.value;
+          else if (!(el.name in data)) data[el.name] = null;
+        } else if (el.tagName.toLowerCase() === 'select' && el.multiple) {
+          data[el.name] = Array.from(el.selectedOptions).map(o => o.value);
+        } else {
+          
+          data[el.name] = el.value;
+        }
+      }
+
+     
+      alert('Data yang dikirim:\\n' + JSON.stringify(data, null, 2));
+      return false;
+    }
+  </script>
+</body>
+</html>

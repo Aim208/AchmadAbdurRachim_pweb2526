@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objek select</title>
+</head>
+<body>
+    <script language="JavaScript">
+        function tekan() {
+            var jurusanstr = (document.fform.Jurusan.value);
+            document.fform.Ojurusan.value = jurusanstr;
+        }
+    </script>
+
+    <form name="fform">
+        <h1>Penggunaan Objek Select</h1>
+        <hr>
+        <h3>Masukkan :</h3>
+        Jurusan Di SMK IGASAR PINDAD :
+        <select name="Jurusan" size="1">
+            <option value="Teknik Pemesinan">TP</option>
+            <option value="Teknik Sepeda Motor">TSM</option>
+            <option value="Teknik Kendaraan Ringan">TKR</option>
+            <option value="Teknik Jaringan Komputer Telekomunikasi">TJKT</option>
+            <option value="Pengembangan Perangkat Lunak dan GIM">PPLG</option>
+        </select>
+        <br><br>
+        <input type="button" value="Kirim" onclick="tekan()">
+        <input type="reset" value="Ulang">
+        <h3>Output Jurusan :</h3>
+        <input type="text" name="Ojurusan" size="40">
+    </form>
+</body>
+</html>
